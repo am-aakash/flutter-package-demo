@@ -1,7 +1,7 @@
 name: demo_package_123
 description: Demo package for testing publishing package
-version: 1.0.0
-homepage: https://pub.dev/my-packages
+version: 1.0.1
+homepage: https://github.com/am-aakash/flutter-package-demo
 
 environment:
   sdk: '>=2.19.6 <3.0.0'
