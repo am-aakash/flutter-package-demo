@@ -1,5 +1,5 @@
 # Rhfiles
-![Generic badge](https://img.shields.io/badge/platform-android%20|%20ios%20.svg)
+![Generic badge](https://img.shields.io/badge/platform-android%20|%20ios%20-blue.svg)
 
 `Rhfiles` is a Flutter package that provides a simple and easy-to-use file picker with a built-in UI. With Rhfiles, you can quickly integrate file selection functionality into your Flutter application and get a list of selected files. Rhfiles supports picking files from the device's file system, camera, gallery, and URL.
 RhUtils is there which has all the pick functionalities with compressor, cropper, etc.
