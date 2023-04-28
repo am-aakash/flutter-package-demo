@@ -24,6 +24,8 @@ dependencies:
 
 ### RhFiles
 ```dart
+import 'package:rhythm_files/rhythm_files.dart';
+
 final RhFiles rhFiles = RhFiles.instance;
 
 List<File?> pickedFiles = await rhFiles.pick(
@@ -43,6 +45,8 @@ rhFiles.dashboard(
 
 ### RhUtils
 ```dart
+import 'package:rhythm_files/rhythm_files.dart';
+
 final RhUtils utils = RhUtils.instance;
 
 List<File?> files = await utils.pickFilesFromDevice(
@@ -73,4 +77,4 @@ File? compressedVideo = await RhUtils.instance.compressVideo(
 ```
 
 
-|![Sample Image](https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) | [![Sample video](https://q5n8c8q9.rocketcdn.me/wp-content/uploads/2019/09/YouTube-thumbnail-size-guide-best-practices-top-examples.png.webp)](http://techslides.com/demos/sample-videos/small.mp4) |
+<!-- ![Sample Image](https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)  [![Sample video](https://q5n8c8q9.rocketcdn.me/wp-content/uploads/2019/09/YouTube-thumbnail-size-guide-best-practices-top-examples.png.webp)](http://techslides.com/demos/sample-videos/small.mp4)  -->
