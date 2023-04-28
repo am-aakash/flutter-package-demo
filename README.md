@@ -1,6 +1,6 @@
 # Rhfiles
 
-Rhfiles is a Flutter package that provides a simple and easy-to-use file picker with a built-in UI. With Rhfiles, you can quickly integrate file selection functionality into your Flutter application and get a list of selected files. Rhfiles supports picking files from the device's file system, camera, gallery, and URL.
+`Rhfiles` is a Flutter package that provides a simple and easy-to-use file picker with a built-in UI. With Rhfiles, you can quickly integrate file selection functionality into your Flutter application and get a list of selected files. Rhfiles supports picking files from the device's file system, camera, gallery, and URL.
 RhUtils is there which has all the pick functionalities with compressor, cropper, etc.
 
 ## Features
@@ -22,19 +22,39 @@ dependencies:
 
 ## Usage
 
-### RhFiles
+The Rhythm Files package provides a simple way to access and manage files on mobile devices. It includes features like picking files from the device storage, selecting files from the camera or gallery, and uploading files to a server.
+
+To use the Rhythm Files package, you need to first import it in your Dart code using the following import statement:
 ```dart
 import 'package:rhythm_files/rhythm_files.dart';
+```
 
+After importing the package, you can create an instance of the `RhFiles` class using the instance property:
+```dart
 final RhFiles rhFiles = RhFiles.instance;
+```
+This instance provides access to various methods of the package.
 
+### Picking Files
+
+To `pick` files from the device storage, you can use the pick method of the `RhFiles` instance. It takes several parameters like `source`, `allowMultiple`, `fileType`, and `allowedExtensions` to customize the file picking process. The method returns a list of `File` objects that you can use to access the selected files.
+
+Here is an example of picking multiple JPG or PNG files from the device storage:
+```dart
 List<File?> pickedFiles = await rhFiles.pick(
   source: Source.file,
   allowMultiple: true,
   fileType: FileType.custom,
   allowedExtensions: ['jpg', 'png'],
 );
+```
 
+### Dashboard
+
+The `dashboard` method of the `RhFiles` instance creates a simple file picking UI that you can integrate into your app. The method takes a callback function `onPick` that is called when the user selects one or more files. The selected files are passed to the callback function as a list of File objects.
+
+Here is an example of using the dashboard method to create a file picking UI:
+```dart
 rhFiles.dashboard(
   onPick: (list) {
     files = list;
@@ -43,23 +63,26 @@ rhFiles.dashboard(
 ),
 ```
 
-### RhUtils
 ```dart
-import 'package:rhythm_files/rhythm_files.dart';
-
 final RhUtils utils = RhUtils.instance;
+```
+This creates an instance of the `RhUtils` class that can be used to call its methods.
 
-List<File?> files = await utils.pickFilesFromDevice(
-  allowMultiple: true,
-  fileType: FileType.custom,
-  allowedExtensions: ['jpg', 'jpeg', 'png'],
-);
+### Image Cropper
 
+```dart
 File? croppedImage = await utils.cropImage(
   imageFile: File('path/to/image.jpg'),
   context: context,
 );
+```
+This method allows you to crop an image file. The method takes in two required parameters: `imageFile`, which is the image file to be cropped, and `context`, which is the build context. It returns the cropped image file as a `File` object.
 
+### File Compressor
+
+`compressFile` method compresses a `file` (image or video) by reducing its size without compromising its quality. It takes in one required parameter, file, which is the original file to be compressed. It returns the compressed file as a `File` object.
+
+```dart
 File? compressedFile = await RhUtils.instance.compressFile(
   file: originalFile, // an image or video
 );
