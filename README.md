@@ -80,7 +80,10 @@ This method allows you to crop an image file. The method takes in two required p
 
 ### File Compressor
 
-`compressFile` method compresses a `file` (image or video) by reducing its size without compromising its quality. It takes in one required parameter, file, which is the original file to be compressed. It returns the compressed file as a `File` object.
+`compressFile` method compresses a `file` (image or video) by reducing its size without compromising its quality. 
+It takes in one required parameter, file, which is the original file to be compressed. 
+It returns the compressed file as a `File` object.
+
 
 ```dart
 File? compressedFile = await RhUtils.instance.compressFile(
@@ -88,13 +91,21 @@ File? compressedFile = await RhUtils.instance.compressFile(
 );
 ```
 
-`compressImage` method compresses an image file by reducing its size without compromising its quality. It takes in three required parameters: `image`, which is the image file to be compressed, `quality`, which is an integer value representing the quality of the compressed image, and `percentage`, which is the percentage of the original image size that the compressed image should be. It returns the compressed image file as a `File` object.
+`compressImage` method compresses an image file by reducing its size without compromising its quality. 
+It takes in three required parameters: `image`, which is the image file to be compressed, `quality`, which is an integer value representing the quality of the compressed image, and `percentage`, which is the percentage of the original image size that the compressed image should be. 
+
+It returns the compressed image file as a `File` object.
+
 
 ```dart
 File? compressedFile = await RhUtils.instance.compressImage(image: imageFile, quality: 80, percentage: 50);
 ```
 
-`compressVideo` method compresses a video file by reducing its size without compromising its quality. It takes in several parameters: `video`, which is the video file to be compressed, `videoQuality`, which is an enum representing the quality of the compressed video, `deleteOrigin`, which is a boolean value indicating whether the original video should be deleted after compression, `includeAudio`, which is a boolean value indicating whether the audio of the video should be included in the compressed video, `frameRate`, which is an integer value representing the frame rate of the compressed video, and `duration`, which is an integer value representing the maximum duration of the compressed video. It returns the compressed video file as a `File` object.
+`compressVideo` method compresses a video file by reducing its size without compromising its quality. 
+
+It takes in several parameters: `video`, which is the video file to be compressed, `videoQuality`, which is an enum representing the quality of the compressed video, `deleteOrigin`, which is a boolean value indicating whether the original video should be deleted after compression, `includeAudio`, which is a boolean value indicating whether the audio of the video should be included in the compressed video, `frameRate`, which is an integer value representing the frame rate of the compressed video, and `duration`, which is an integer value representing the maximum duration of the compressed video. 
+It returns the compressed video file as a `File` object.
+
 
 ```dart
 File? compressedVideo = await RhUtils.instance.compressVideo(
